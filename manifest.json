@@ -1,0 +1,16 @@
+{
+	"name" : "媒体重定向插件3",
+	"version" : "0.0.1",
+	"manifest_version" : 2,
+	"description" : "截获Flash并转发",
+	"background" : {
+		"scripts" : ["background.js"]
+	},
+	"content_scripts" : [{
+			"js" : ["js/jquery-2.1.3.js","inject.js"],
+			"matches" : ["http://*/*","https://*/*"],
+			"run_at" : "document_end"
+		}
+	],
+	"permissions" : ["notifications", "http://*/"]
+}
